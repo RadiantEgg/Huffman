@@ -12,4 +12,6 @@ typedef enum {
     HUFF_STATUS_COUNT     // 文件内容与格式不符
 } HuffStatus;
 
+const char *huff_status_message(HuffStatus status);
+
 #endif
