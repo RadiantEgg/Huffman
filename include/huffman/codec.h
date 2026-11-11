@@ -1,9 +1,13 @@
 #ifndef HUFFMAN_CODEC_H
 #define HUFFMAN_CODEC_H
 
-/* 一次编码或一次译码。不负责菜单，也不负责清单排版。 */
-
 #include "huffman/bitstream.h"
 #include "huffman/tree.h"
+
+HuffStatus huff_codec_count(const char *path, unsigned char *symbols, uint64_t *weights, int *leaf_count);
+
+HuffStatus huff_codec_encode(const HuffTree *tree, const char *source_path, const char *encoded_path);
+
+HuffStatus huff_codec_decode(const HuffTree *tree, const char *encoded_path, const char *decoded_path);
 
 #endif
