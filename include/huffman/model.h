@@ -1,8 +1,9 @@
 #ifndef HUFFMAN_MODEL_H
 #define HUFFMAN_MODEL_H
 
-/* 把树写入模型文件，或从模型文件读回内存。不编码原文。 */
-
 #include "huffman/tree.h"
+
+HuffStatus huff_model_save(const HuffTree *tree, const char *path);
+HuffStatus huff_model_load(HuffTree *tree, const char *path);
 
 #endif
