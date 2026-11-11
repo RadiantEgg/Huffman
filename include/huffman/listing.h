@@ -1,9 +1,11 @@
 #ifndef HUFFMAN_LISTING_H
 #define HUFFMAN_LISTING_H
 
-/* 码清单和树清单。不建树，不译码。 */
-
 #include "huffman/bitstream.h"
 #include "huffman/tree.h"
+
+HuffStatus huff_listing_codes(const char *encoded_path, const char *listing_path);
+
+HuffStatus huff_listing_tree(const HuffTree *tree, const char *listing_path);
 
 #endif
